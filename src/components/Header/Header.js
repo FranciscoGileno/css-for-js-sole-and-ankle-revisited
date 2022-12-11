@@ -25,12 +25,12 @@ const Header = () => {
             <Logo />
           </Side>
           <Nav>
-            <NavLink href="/sale">Sale</NavLink>
-            <NavLink href="/new">New&nbsp;Releases</NavLink>
-            <NavLink href="/men">Men</NavLink>
-            <NavLink href="/women">Women</NavLink>
-            <NavLink href="/kids">Kids</NavLink>
-            <NavLink href="/collections">Collections</NavLink>
+            <NavLink href="/sale">A Venda</NavLink>
+            <NavLink href="/new">Novos Lançamentos </NavLink>
+            <NavLink href="/men">Homens</NavLink>
+            <NavLink href="/women">Mulheres</NavLink>
+            <NavLink href="/kids">Crianças</NavLink>
+            <NavLink href="/collections">Coleções</NavLink>
           </Nav>
           <Side />
         </DeskopMainHeader>
@@ -67,6 +67,8 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+
   @media ${QUERIES.tabledAndDown} {
     border-top: 4px solid ${COLORS.gray[900]};
     padding: 18px 16px;
@@ -77,6 +79,7 @@ const DeskopMainHeader = styled.div`
   display: flex;
   align-items: baseline;
   width: 100%;
+
   @media ${QUERIES.tabledAndDown} {
     display: none;
   }
@@ -94,7 +97,7 @@ const MobileMainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 15vw - 8rem, 3rem);
   margin: 0px 48px;
 `;
 
@@ -108,6 +111,7 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
+  white-space: nowrap;
 
   &:first-of-type {
     color: ${COLORS.secondary};
