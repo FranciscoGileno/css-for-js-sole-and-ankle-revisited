@@ -50,7 +50,7 @@ const DialogOverlayWrapper = styled(DialogOverlay)`
 `;
 
 const DialogContentWrapper = styled(DialogContent)`
-  background-color: ${COLORS.white};
+  background-color: var(--color-white);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -77,7 +77,7 @@ const Nav = styled.nav`
   justify-content: center;
 
   a {
-    color: var(--textColor, ${COLORS.gray[900]});
+    color: var(--textColor, var(--color-gray-900));
     text-decoration: none;
     text-transform: uppercase;
     font-size: ${21 / 16}rem;
@@ -92,7 +92,7 @@ const Footer = styled.footer`
   padding-bottom: 32px;
 
   a {
-    color: var(--textColor, ${COLORS.gray[700]});
+    color: var(--textColor, var(--color-gray-700));
     text-decoration: none;
     font-size: ${14 / 16}rem;
     font-weight: 500;
